@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://u5ysptinbhdx"]
+[gd_scene load_steps=11 format=3 uid="uid://u5ysptinbhdx"]
 
 [ext_resource type="Script" path="res://levels/main_game.gd" id="1_madwl"]
 [ext_resource type="PackedScene" uid="uid://cs1r23ta3j5ch" path="res://components/ui/transition_screen/transition_screen.tscn" id="2_58lcj"]
-[ext_resource type="PackedScene" uid="uid://dso5lelvcf8m0" path="res://components/biomes/0_surface.tscn" id="3_1m15x"]
 [ext_resource type="PackedScene" uid="uid://clarv4n7o8im6" path="res://components/actors/player/player.tscn" id="4_xih85"]
 [ext_resource type="PackedScene" uid="uid://cj7l3xpftmbli" path="res://components/ui/game_ui.tscn" id="5_11vk3"]
 [ext_resource type="AudioStream" uid="uid://bjc0ttkj8iex2" path="res://assets/sound/level_0_final.mp3" id="6_ylimd"]
@@ -65,8 +64,6 @@ _data = {
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_madwl")
 transition_screen_scene = ExtResource("2_58lcj")
-
-[node name="Biome" parent="." instance=ExtResource("3_1m15x")]
 
 [node name="Player" parent="." instance=ExtResource("4_xih85")]
 position = Vector2(136, 480)

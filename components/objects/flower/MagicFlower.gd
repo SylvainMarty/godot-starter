@@ -18,4 +18,3 @@ func _ready():
 		stats.jump_velocity = 200
 		stats.attack_damage = 100
 		stats.defense_damage_resistance = 50
-

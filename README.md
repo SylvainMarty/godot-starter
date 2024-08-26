@@ -4,7 +4,7 @@
 
 You need:
 * Git (use [Github Desktop](https://desktop.github.com/) if you're not familiar with Git)
-* Godot v4.2
+* Godot v4.3
 
 Then follow these instructions:
 1. Clone the repository
