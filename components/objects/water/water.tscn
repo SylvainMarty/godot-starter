@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dol5ruxuktdgg"]
+
+[ext_resource type="Texture2D" uid="uid://dqfix2xb3wr2n" path="res://assets/art/objects/water_wide.png" id="1_i4ins"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xmk1"]
+size = Vector2(401, 861)
+
+[node name="Water" type="StaticBody2D"]
+
+[node name="Water1" type="Polygon2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_i4ins")
+texture_offset = Vector2(0, 20)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(0, -12, 400, -12, 400, 200, 0, 200)
+
+[node name="Water2" type="Polygon2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_i4ins")
+texture_offset = Vector2(40, 57)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(0, 75, 400, 75, 400, 200, 0, 200)
+
+[node name="Water3" type="Polygon2D" parent="."]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("1_i4ins")
+texture_offset = Vector2(0, 93)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(0, 165, 400, 165, 400, 200, 0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(200.5, -229.5)
+shape = SubResource("RectangleShape2D_1xmk1")

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dej0wbntue31t"
+
+[deps]
+
+files=["res://assets/contents/inspectable_content.en.translation"]
+
+source_file="res://assets/contents/inspectable_content.csv"
+dest_files=["res://assets/contents/inspectable_content.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

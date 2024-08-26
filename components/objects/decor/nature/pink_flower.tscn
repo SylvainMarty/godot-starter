@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp7wqqo5gtq82"]
+
+[ext_resource type="Texture2D" uid="uid://b4k5pbhsng2ck" path="res://assets/art/objects/pink_flower.png" id="1_jqv43"]
+
+[node name="PinkFlower" type="Sprite2D"]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_jqv43")

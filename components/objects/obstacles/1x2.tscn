@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://4lraumeps6t4"]
+
+[ext_resource type="Script" path="res://components/objects/obstacles/Obstacle.gd" id="1_1u7dk"]
+[ext_resource type="Texture2D" uid="uid://blwv0ht5ttyv3" path="res://assets/art/objects/cave_rock_1.png" id="1_xrelb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28ase"]
+size = Vector2(36, 36)
+
+[node name="1x2t" type="StaticBody2D"]
+script = ExtResource("1_1u7dk")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, -0.499998)
+scale = Vector2(1, 1.04167)
+texture = ExtResource("1_xrelb")
+texture_offset = Vector2(20.255, 63.63)
+texture_scale = Vector2(24.695, 8.48)
+polygon = PackedVector2Array(-18, -36, 18, -36, 18, 36, -18, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_28ase")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba14rxguj4qjh"]
+
+[ext_resource type="Script" path="res://components/objects/village/Village.gd" id="1_fetan"]
+[ext_resource type="PackedScene" uid="uid://xorymtx6ojpl" path="res://components/objects/decor/houses/house_front.tscn" id="1_lethw"]
+[ext_resource type="PackedScene" uid="uid://c0jr1rnysduen" path="res://components/objects/decor/houses/house_side.tscn" id="2_mbkw1"]
+[ext_resource type="PackedScene" uid="uid://iqbxsnq531rm" path="res://components/objects/decor/houses/windmill.tscn" id="3_g5316"]
+[ext_resource type="PackedScene" uid="uid://boo0w63abu0uj" path="res://components/objects/decor/nature/bush.tscn" id="4_r6h8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0jlq"]
+size = Vector2(26, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hif8v"]
+size = Vector2(264, 130)
+
+[node name="Village" type="StaticBody2D"]
+script = ExtResource("1_fetan")
+
+[node name="HouseFront" parent="." instance=ExtResource("1_lethw")]
+position = Vector2(209, 387)
+
+[node name="HouseSide2" parent="." instance=ExtResource("2_mbkw1")]
+position = Vector2(130, 415)
+
+[node name="HouseFront2" parent="." instance=ExtResource("1_lethw")]
+position = Vector2(585, 425)
+
+[node name="HouseSide" parent="." instance=ExtResource("2_mbkw1")]
+position = Vector2(-11, 392)
+
+[node name="HouseSide3" parent="." instance=ExtResource("2_mbkw1")]
+position = Vector2(719, 429)
+
+[node name="HouseFront3" parent="." instance=ExtResource("1_lethw")]
+position = Vector2(661, 390)
+
+[node name="Windmill" parent="." instance=ExtResource("3_g5316")]
+position = Vector2(-216, 276)
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(88, 458)
+shape = SubResource("RectangleShape2D_q0jlq")
+
+[node name="Bush" parent="." instance=ExtResource("4_r6h8y")]
+position = Vector2(500, 467)
+
+[node name="Bush2" parent="." instance=ExtResource("4_r6h8y")]
+position = Vector2(880, 467)
+
+[node name="SaveVillageArea2D" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SaveVillageArea2D"]
+position = Vector2(380, 448)
+shape = SubResource("RectangleShape2D_hif8v")
+
+[connection signal="body_entered" from="SaveVillageArea2D" to="." method="_on_save_village_area_2d_body_entered"]

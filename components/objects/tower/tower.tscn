@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://xm0towrxp54a"]
+
+[ext_resource type="Script" path="res://components/objects/tower/Tower.gd" id="1_rx1r7"]
+[ext_resource type="PackedScene" uid="uid://bkkppp3tjps50" path="res://components/objects/actionable/actionable.tscn" id="2_ar548"]
+[ext_resource type="Texture2D" uid="uid://b22smwfm63xu0" path="res://assets/art/objects/rune_tower.png" id="2_wvh48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kp06c"]
+size = Vector2(1280, 1016.66)
+
+[sub_resource type="Gradient" id="Gradient_xmprl"]
+offsets = PackedFloat32Array(0, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r8nom"]
+gradient = SubResource("Gradient_xmprl")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_wkage"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPointLight/MovingPointLight2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -256)]
+}
+
+[sub_resource type="Animation" id="Animation_imueh"]
+resource_name = "moving"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPointLight/MovingPointLight2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7.62939e-06, -256), Vector2(-10, -224), Vector2(7, -216), Vector2(0, -172), Vector2(7, -216)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rc5h"]
+_data = {
+"RESET": SubResource("Animation_wkage"),
+"moving": SubResource("Animation_imueh")
+}
+
+[node name="Tower" type="Node2D" groups=["towers"]]
+z_index = -1
+script = ExtResource("1_rx1r7")
+
+[node name="TowerSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -256)
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("2_wvh48")
+
+[node name="DoorActionable" parent="." node_paths=PackedStringArray("content_position") instance=ExtResource("2_ar548")]
+content_position = NodePath("DoorHintMarker2D")
+
+[node name="Area2D" type="Area2D" parent="DoorActionable"]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorActionable/Area2D"]
+position = Vector2(0, -76.7501)
+scale = Vector2(0.1, 0.15)
+shape = SubResource("RectangleShape2D_kp06c")
+
+[node name="DoorHintMarker2D" type="Marker2D" parent="DoorActionable"]
+position = Vector2(-64, -112)
+
+[node name="PlayerSpawnPointMarker2D" type="Marker2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -55)
+scale = Vector2(3.75, 1.9375)
+color = Color(1, 0.94902, 0.458824, 1)
+energy = 0.9
+texture = SubResource("GradientTexture2D_r8nom")
+
+[node name="MovingPointLight" type="Node2D" parent="."]
+position = Vector2(0, -50)
+
+[node name="MovingPointLight2D" type="PointLight2D" parent="MovingPointLight"]
+position = Vector2(0, -256)
+scale = Vector2(1.25, 1.25)
+energy = 4.32
+texture = SubResource("GradientTexture2D_r8nom")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPointLight/MovingPointLight2D"]
+root_node = NodePath("../../../PointLight2D")
+libraries = {
+"": SubResource("AnimationLibrary_5rc5h")
+}
+
+[connection signal="actionable" from="DoorActionable" to="." method="_on_door_actionable_actionable"]

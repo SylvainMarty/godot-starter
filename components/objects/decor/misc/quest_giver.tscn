@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://kr155n6vbafh"]
+
+[ext_resource type="Texture2D" uid="uid://t5bgjv5c64ph" path="res://assets/art/objects/quest_giver.png" id="1_qwgce"]
+
+[node name="QuestGiver" type="Sprite2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_qwgce")

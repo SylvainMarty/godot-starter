@@ -1,0 +1,207 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj7l3xpftmbli"]
+
+[ext_resource type="Script" path="res://components/ui/DebugUi.gd" id="2_1jcup"]
+[ext_resource type="Texture2D" uid="uid://sslgtate75io" path="res://assets/protyping/icons/superman.svg" id="3_p7tig"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1eb17"]
+content_margin_bottom = 0.0
+draw_center = false
+border_width_bottom = 1
+border_color = Color(0.830335, 0.830335, 0.830335, 1)
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="DebugUIPanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_bottom = 47.0
+grow_horizontal = 0
+theme_type_variation = &"DebugPanelContainer"
+script = ExtResource("2_1jcup")
+
+[node name="MarginContainer" type="MarginContainer" parent="DebugUIPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugUIPanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="DebugUILabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DebugLabel"
+theme_override_font_sizes/font_size = 20
+text = "Debug UI"
+
+[node name="Separator" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
+
+[node name="HealthGridContainer" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="HealthLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+theme_type_variation = &"DebugLabel"
+text = "🧝HP"
+
+[node name="HealthPoints" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"DebugLabel"
+text = "XXX"
+horizontal_alignment = 2
+
+[node name="HealthInput" type="LineEdit" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "10"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="DamageButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="InvincibleIcon" type="TextureRect" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+texture = ExtResource("3_p7tig")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="InvincibleSwitch" type="CheckButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
+layout_mode = 2
+
+[node name="Separator2" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
+
+[node name="VillageHealthGridContainer2" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="VillageHealthLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+theme_type_variation = &"DebugLabel"
+text = "🏠HP"
+
+[node name="VillageHealthPoints" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"DebugLabel"
+text = "XXX"
+horizontal_alignment = 2
+
+[node name="VillageInvincibleIcon" type="TextureRect" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+texture = ExtResource("3_p7tig")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VillageInvincibleSwitch" type="CheckButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+
+[node name="KillVillageButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kill"
+
+[node name="SaveVillageButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="Separator4" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
+
+[node name="BiomeGridContainer" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="BiomeLevelLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+layout_mode = 2
+theme_type_variation = &"DebugLabel"
+text = "Level"
+
+[node name="LevelList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+selected = 0
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TowerList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="TeleportButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go"
+
+[node name="Separator3" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
+
+[node name="SoundGridContainer2" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="MuteSoundlLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/SoundGridContainer2"]
+layout_mode = 2
+theme_type_variation = &"DebugLabel"
+text = "Mute 🔇"
+
+[node name="MuteSoundSwitch" type="CheckButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/SoundGridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Separator5" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
+
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer/HBoxContainer/HealButton" to="DebugUIPanelContainer" method="_on_heal_button_pressed"]
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer/HBoxContainer/DamageButton" to="DebugUIPanelContainer" method="_on_damage_button_pressed"]
+[connection signal="toggled" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer/InvincibleSwitch" to="DebugUIPanelContainer" method="_on_invincible_switch_toggled"]
+[connection signal="toggled" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/VillageInvincibleSwitch" to="DebugUIPanelContainer" method="_on_village_invincible_switch_toggled"]
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/KillVillageButton" to="DebugUIPanelContainer" method="_on_kill_village_button_pressed"]
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/SaveVillageButton" to="DebugUIPanelContainer" method="_on_save_village_button_pressed"]
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer/TeleportButton" to="DebugUIPanelContainer" method="_on_teleport_button_pressed"]
+[connection signal="toggled" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/SoundGridContainer2/MuteSoundSwitch" to="DebugUIPanelContainer" method="_on_mute_sound_switch_toggled"]

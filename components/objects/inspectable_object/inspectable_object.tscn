@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://6syvlh4v41q0"]
+
+[ext_resource type="Script" path="res://components/objects/inspectable_object/InspectableObject.gd" id="1_3mfwb"]
+[ext_resource type="PackedScene" uid="uid://bkkppp3tjps50" path="res://components/objects/actionable/actionable.tscn" id="1_bex7s"]
+
+[node name="InspectableObject" instance=ExtResource("1_bex7s")]
+script = ExtResource("1_3mfwb")
+inspectable_object_key = ""
+display_content_automatically = false
+panel_minimum_width = 0.0
+actions = Array[String](["interact"])
+action_labels = Array[String](["Press %s to interact"])
+
+[node name="HintLabel" parent="HintPopupPanel" index="0"]
+text = "Press <null> to interact"
+
+[node name="InspectableContentPopupPanel" type="PanelContainer" parent="." index="1"]
+visible = false
+z_index = 9
+offset_right = 135.0
+offset_bottom = 31.0
+
+[node name="InspectableContent" type="RichTextLabel" parent="InspectableContentPopupPanel" index="0"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

@@ -1,0 +1,239 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmqvu1woem0em"]
+
+[ext_resource type="Script" path="res://components/ui/main_menu/MainMenu.gd" id="1_pj55f"]
+
+[node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_pj55f")
+
+[node name="StartMenuPanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_type_variation = &"DebugPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="StartMenuPanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="StartMenuPanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="StartMenuPanelContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="StartMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "The Garden of Gifts"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="StartMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="StartGameButton" type="Button" parent="StartMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start game"
+
+[node name="PauseMenuPanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_type_variation = &"DebugPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenuPanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenuPanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Game paused"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="ResumeGameButton" type="Button" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume game"
+
+[node name="Separator2" type="Label" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="RestartGameButton" type="Button" parent="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart game"
+
+[node name="PlayerDiedPanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_type_variation = &"DebugPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="PlayerDiedPanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PlayerDiedPanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerDiedPanelContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayerDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "You died!"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="PlayerDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="RestartGameButton" type="Button" parent="PlayerDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart game"
+
+[node name="VillageDiedPanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_type_variation = &"DebugPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="VillageDiedPanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VillageDiedPanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "The village died!"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "The village died while you were away..."
+fit_content = true
+scroll_active = false
+
+[node name="Separator2" type="Label" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="RestartGameButton" type="Button" parent="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart game"
+
+[node name="VillageSavedMenuPanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_type_variation = &"DebugPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="VillageSavedMenuPanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VillageSavedMenuPanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "You saved the village!"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 2
+
+[node name="StartNewGameButton" type="Button" parent="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start a new game"
+
+[connection signal="pressed" from="StartMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="PauseMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/RestartGameButton" to="." method="_on_restart_game_button_pressed"]
+[connection signal="pressed" from="PlayerDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/RestartGameButton" to="." method="_on_restart_game_button_pressed"]
+[connection signal="pressed" from="VillageDiedPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/RestartGameButton" to="." method="_on_restart_game_button_pressed"]
+[connection signal="pressed" from="VillageSavedMenuPanelContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/StartNewGameButton" to="." method="_on_start_new_game_button_pressed"]

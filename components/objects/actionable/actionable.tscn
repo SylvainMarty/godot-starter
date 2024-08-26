@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkkppp3tjps50"]
+
+[ext_resource type="Script" path="res://components/objects/actionable/Actionable.gd" id="1_vpuwb"]
+
+[node name="Actionable" type="Node2D"]
+script = ExtResource("1_vpuwb")
+
+[node name="HintPopupPanel" type="PanelContainer" parent="."]
+visible = false
+z_index = 9
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 127.0
+grow_vertical = 0
+
+[node name="HintLabel" type="Label" parent="HintPopupPanel"]
+layout_mode = 2

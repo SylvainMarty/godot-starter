@@ -1,0 +1,1131 @@
+[gd_scene load_steps=48 format=3 uid="uid://dso5lelvcf8m0"]
+
+[ext_resource type="PackedScene" uid="uid://v16uck06pb6v" path="res://components/biomes/base_biome/base_biome.tscn" id="1_g6v5i"]
+[ext_resource type="PackedScene" uid="uid://6syvlh4v41q0" path="res://components/objects/inspectable_object/inspectable_object.tscn" id="2_c02dy"]
+[ext_resource type="AudioStream" uid="uid://bjc0ttkj8iex2" path="res://assets/sound/level_0_final.mp3" id="2_loe4g"]
+[ext_resource type="PackedScene" uid="uid://ba14rxguj4qjh" path="res://components/objects/village/village.tscn" id="3_5dxhn"]
+[ext_resource type="PackedScene" uid="uid://xm0towrxp54a" path="res://components/objects/tower/tower.tscn" id="6_mvd0c"]
+[ext_resource type="PackedScene" uid="uid://df4eamsehktgy" path="res://components/biomes/surface_parallax/surface_parallax_background.tscn" id="6_uwkl2"]
+[ext_resource type="PackedScene" uid="uid://by5qafq6ekw4b" path="res://components/objects/obstacles/4x4.tscn" id="7_qsyp6"]
+[ext_resource type="PackedScene" uid="uid://fo1qtk3tnfxj" path="res://components/objects/obstacles/2x2.tscn" id="8_j27ri"]
+[ext_resource type="PackedScene" uid="uid://hlsbp3scx8qf" path="res://components/objects/obstacles/2x1.tscn" id="9_sdlqc"]
+[ext_resource type="PackedScene" uid="uid://b58m1qpfhvtqp" path="res://components/actors/enemies/worm.tscn" id="10_5wblv"]
+[ext_resource type="PackedScene" uid="uid://4lraumeps6t4" path="res://components/objects/obstacles/1x2.tscn" id="10_ufa62"]
+[ext_resource type="PackedScene" uid="uid://dol5ruxuktdgg" path="res://components/objects/water/water.tscn" id="11_7cqrf"]
+[ext_resource type="Texture2D" uid="uid://37c0w8g2kfls" path="res://assets/art/objects/grass_wide.png" id="11_7fspj"]
+[ext_resource type="Script" path="res://components/classes/HealthStat.gd" id="11_7x5wp"]
+[ext_resource type="Texture2D" uid="uid://c2cx8w82tvf74" path="res://assets/art/objects/grass_middle.png" id="12_acpq5"]
+[ext_resource type="Texture2D" uid="uid://dhcf2dsrpewe5" path="res://assets/art/objects/signpost.png" id="12_f18i2"]
+[ext_resource type="PackedScene" uid="uid://dilwul43fnn5p" path="res://components/objects/decor/misc/signpost.tscn" id="12_h032l"]
+[ext_resource type="PackedScene" uid="uid://dp34h7kkq24md" path="res://components/objects/traps/spikes.tscn" id="13_n30ah"]
+[ext_resource type="PackedScene" uid="uid://bi7xc8bv1d5py" path="res://components/objects/pick_up_object/pick_up_object.tscn" id="14_3xb5q"]
+[ext_resource type="PackedScene" uid="uid://gufs1p8ytdmq" path="res://components/objects/melee_weapon/melee_weapon.tscn" id="15_fw5en"]
+[ext_resource type="PackedScene" uid="uid://g4rux7e180jb" path="res://components/objects/water/water_edge.tscn" id="16_pww2q"]
+[ext_resource type="PackedScene" uid="uid://b13yk7nnt2abq" path="res://components/objects/obstacles/2x4.tscn" id="16_tkqpr"]
+[ext_resource type="Script" path="res://components/classes/ActorStat.gd" id="20_ac4mk"]
+[ext_resource type="PackedScene" uid="uid://71nujfcp73og" path="res://components/objects/obstacles/1x4.tscn" id="20_i5fpv"]
+[ext_resource type="PackedScene" uid="uid://boo0w63abu0uj" path="res://components/objects/decor/nature/bush.tscn" id="21_2vuhs"]
+[ext_resource type="PackedScene" uid="uid://dlia3n5g18h5v" path="res://components/objects/flower/magic_flower.tscn" id="23_6ija2"]
+[ext_resource type="PackedScene" uid="uid://kr155n6vbafh" path="res://components/objects/decor/misc/quest_giver.tscn" id="24_ap7py"]
+[ext_resource type="PackedScene" uid="uid://svtbgcgxpj0a" path="res://components/actors/enemies/guardian.tscn" id="25_rv2c4"]
+[ext_resource type="PackedScene" uid="uid://cxa5xqfu1xfxl" path="res://components/objects/obstacles/4x2.tscn" id="28_hdwbo"]
+
+[sub_resource type="Resource" id="Resource_cbj4f"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_lhjgc"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_k1x6j"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_6fim8"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_w24a6"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_0fl85"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_yar7u"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_1x8by"]
+script = ExtResource("11_7x5wp")
+health_points = 120
+invincible = false
+
+[sub_resource type="Resource" id="Resource_be4mc"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_6yfe5"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_7b03w"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_heddm"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_ymeoq"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_woxga"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="Resource" id="Resource_5da4a"]
+script = ExtResource("11_7x5wp")
+health_points = 80
+invincible = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fte1"]
+size = Vector2(3242.66, 6656)
+
+[sub_resource type="Resource" id="Resource_n3qrw"]
+resource_local_to_scene = true
+script = ExtResource("20_ac4mk")
+movement_speed = 0.0
+jump_velocity = 0.0
+attack_speed = 300.0
+attack_range = 20.0
+attack_damage = 40
+attack_knock_back_vector = Vector2(0, 0)
+attack_self_knock_back_strength = 0.0
+defense_damage_resistance = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgsv0"]
+size = Vector2(32998, 17.5)
+
+[node name="BaseBiome" instance=ExtResource("1_g6v5i")]
+audio_stream = ExtResource("2_loe4g")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="0"]
+color = Color(0.169245, 0.169245, 0.169245, 1)
+energy = 0.5
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="." index="1"]
+position = Vector2(134, 450)
+
+[node name="BackgroundLayer" type="Node2D" parent="." index="2"]
+z_index = -5
+
+[node name="Bush3" parent="BackgroundLayer" index="0" instance=ExtResource("21_2vuhs")]
+position = Vector2(1521, 467)
+
+[node name="Bush4" parent="BackgroundLayer" index="1" instance=ExtResource("21_2vuhs")]
+position = Vector2(2663, 470)
+
+[node name="Village" parent="BackgroundLayer" index="2" instance=ExtResource("3_5dxhn")]
+
+[node name="Tower" parent="BackgroundLayer" index="3" instance=ExtResource("6_mvd0c")]
+position = Vector2(7700, 511)
+
+[node name="Tower2" parent="BackgroundLayer" index="4" instance=ExtResource("6_mvd0c")]
+position = Vector2(8300, 512)
+tower_id = 1
+
+[node name="Tower3" parent="BackgroundLayer" index="5" instance=ExtResource("6_mvd0c")]
+position = Vector2(16000, 512)
+tower_id = 2
+
+[node name="Tower4" parent="BackgroundLayer" index="6" instance=ExtResource("6_mvd0c")]
+position = Vector2(24000, 512)
+tower_id = 3
+
+[node name="Tower5" parent="BackgroundLayer" index="7" instance=ExtResource("6_mvd0c")]
+position = Vector2(32000, 512)
+tower_id = 4
+
+[node name="SurfaceParallaxBackground" parent="BackgroundLayer" index="8" instance=ExtResource("6_uwkl2")]
+
+[node name="ActionLayer" type="Node2D" parent="." index="3"]
+
+[node name="Worm" parent="ActionLayer" index="0" instance=ExtResource("10_5wblv")]
+position = Vector2(2500, 480)
+health = SubResource("Resource_cbj4f")
+
+[node name="Worm10" parent="ActionLayer" index="1" instance=ExtResource("10_5wblv")]
+position = Vector2(16917, 484)
+health = SubResource("Resource_lhjgc")
+
+[node name="Worm7" parent="ActionLayer" index="2" instance=ExtResource("10_5wblv")]
+position = Vector2(17880, 484)
+health = SubResource("Resource_k1x6j")
+
+[node name="Worm8" parent="ActionLayer" index="3" instance=ExtResource("10_5wblv")]
+position = Vector2(18203, 484)
+health = SubResource("Resource_6fim8")
+
+[node name="Worm5" parent="ActionLayer" index="4" instance=ExtResource("10_5wblv")]
+position = Vector2(17593, 484)
+health = SubResource("Resource_w24a6")
+
+[node name="Worm4" parent="ActionLayer" index="5" instance=ExtResource("10_5wblv")]
+position = Vector2(17304, 484)
+health = SubResource("Resource_0fl85")
+
+[node name="Worm9" parent="ActionLayer" index="6" instance=ExtResource("10_5wblv")]
+position = Vector2(18452, 484)
+health = SubResource("Resource_yar7u")
+
+[node name="Worm6" parent="ActionLayer" index="7" instance=ExtResource("10_5wblv")]
+position = Vector2(18809, 476)
+health = SubResource("Resource_1x8by")
+
+[node name="Worm2" parent="ActionLayer" index="8" instance=ExtResource("10_5wblv")]
+position = Vector2(21273, 478)
+health = SubResource("Resource_be4mc")
+
+[node name="Worm3" parent="ActionLayer" index="9" instance=ExtResource("10_5wblv")]
+position = Vector2(21714, 472)
+health = SubResource("Resource_6yfe5")
+
+[node name="Worm11" parent="ActionLayer" index="10" instance=ExtResource("10_5wblv")]
+position = Vector2(23331, 478)
+health = SubResource("Resource_7b03w")
+
+[node name="Worm12" parent="ActionLayer" index="11" instance=ExtResource("10_5wblv")]
+position = Vector2(25626, 482)
+health = SubResource("Resource_heddm")
+
+[node name="Worm13" parent="ActionLayer" index="12" instance=ExtResource("10_5wblv")]
+position = Vector2(26593, 480)
+health = SubResource("Resource_ymeoq")
+
+[node name="Worm14" parent="ActionLayer" index="13" instance=ExtResource("10_5wblv")]
+position = Vector2(28270, 478)
+health = SubResource("Resource_woxga")
+
+[node name="Worm15" parent="ActionLayer" index="14" instance=ExtResource("10_5wblv")]
+position = Vector2(27918, 475)
+health = SubResource("Resource_5da4a")
+
+[node name="SignpostWater" parent="ActionLayer" index="15" node_paths=PackedStringArray("content_position") instance=ExtResource("2_c02dy")]
+position = Vector2(9250, 496)
+inspectable_object_key = "signpost_water"
+content_position = NodePath("Marker2D")
+
+[node name="Signpost" type="Sprite2D" parent="ActionLayer/SignpostWater" index="2"]
+position = Vector2(-16, -21)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_f18i2")
+
+[node name="Area2D" type="Area2D" parent="ActionLayer/SignpostWater" index="3"]
+position = Vector2(24, 8)
+scale = Vector2(0.046875, 0.015625)
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionLayer/SignpostWater/Area2D" index="0"]
+position = Vector2(-831.997, -2816)
+shape = SubResource("RectangleShape2D_1fte1")
+debug_color = Color(0.772549, 0.843137, 0.556863, 0.627451)
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/SignpostWater" index="4"]
+position = Vector2(-32, -72)
+scale = Vector2(0.046875, 0.015625)
+
+[node name="SignpostGarden" parent="ActionLayer" index="16" node_paths=PackedStringArray("content_position") instance=ExtResource("2_c02dy")]
+position = Vector2(30700, 496)
+inspectable_object_key = "signpost_garden"
+content_position = NodePath("Marker2D")
+
+[node name="Signpost" parent="ActionLayer/SignpostGarden" index="2" instance=ExtResource("12_h032l")]
+position = Vector2(-17, -21)
+
+[node name="Area2D" type="Area2D" parent="ActionLayer/SignpostGarden" index="3"]
+position = Vector2(24, 8)
+scale = Vector2(0.046875, 0.015625)
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionLayer/SignpostGarden/Area2D" index="0"]
+position = Vector2(-831.997, -2816)
+shape = SubResource("RectangleShape2D_1fte1")
+debug_color = Color(0.772549, 0.843137, 0.556863, 0.627451)
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/SignpostGarden" index="4"]
+position = Vector2(-32, -72)
+scale = Vector2(0.046875, 0.015625)
+
+[node name="SignpostGarden2" parent="ActionLayer" index="17" node_paths=PackedStringArray("content_position") instance=ExtResource("2_c02dy")]
+position = Vector2(31500, 496)
+inspectable_object_key = "signpost_garden"
+content_position = NodePath("Marker2D")
+
+[node name="Signpost" parent="ActionLayer/SignpostGarden2" index="0" instance=ExtResource("12_h032l")]
+position = Vector2(-17, -23)
+
+[node name="Area2D" type="Area2D" parent="ActionLayer/SignpostGarden2" index="3"]
+position = Vector2(24, 8)
+scale = Vector2(0.046875, 0.015625)
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionLayer/SignpostGarden2/Area2D" index="0"]
+position = Vector2(-831.997, -2816)
+shape = SubResource("RectangleShape2D_1fte1")
+debug_color = Color(0.772549, 0.843137, 0.556863, 0.627451)
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/SignpostGarden2" index="4"]
+position = Vector2(-32, -72)
+scale = Vector2(0.046875, 0.015625)
+
+[node name="Mountain" type="Node2D" parent="ActionLayer" index="18"]
+position = Vector2(2000, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x2t2" parent="ActionLayer/Mountain" index="8" instance=ExtResource("8_j27ri")]
+position = Vector2(252, -35)
+
+[node name="2x1t2" parent="ActionLayer/Mountain" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="Mountain2" type="Node2D" parent="ActionLayer" index="19"]
+position = Vector2(4000, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain2" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain2" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain2" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain2" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain2" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain2" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain2" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain2" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x2t2" parent="ActionLayer/Mountain2" index="8" instance=ExtResource("8_j27ri")]
+position = Vector2(252, -35)
+
+[node name="2x1t2" parent="ActionLayer/Mountain2" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="Mountain3" type="Node2D" parent="ActionLayer" index="20"]
+position = Vector2(11664, 511)
+
+[node name="4x4t" parent="ActionLayer/Mountain3" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-6382, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain3" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(-6239, -71)
+
+[node name="2x2t" parent="ActionLayer/Mountain3" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-6490, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain3" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(-6239, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain3" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-6562, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain3" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-6329, -179)
+
+[node name="Mountain4" type="Node2D" parent="ActionLayer" index="21"]
+position = Vector2(7000, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain4" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain4" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain4" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain4" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain4" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain4" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain4" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain4" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x2t2" parent="ActionLayer/Mountain4" index="8" instance=ExtResource("8_j27ri")]
+position = Vector2(252, -35)
+
+[node name="2x1t2" parent="ActionLayer/Mountain4" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="Mountain5" type="Node2D" parent="ActionLayer" index="22"]
+position = Vector2(22500, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain5" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain5" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain5" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain5" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain5" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain5" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain5" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain5" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x2t2" parent="ActionLayer/Mountain5" index="8" instance=ExtResource("8_j27ri")]
+position = Vector2(252, -35)
+
+[node name="2x1t2" parent="ActionLayer/Mountain5" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="Mountain6" type="Node2D" parent="ActionLayer" index="23"]
+position = Vector2(15000, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain6" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain6" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain6" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain6" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain6" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain6" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain6" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain6" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x1t2" parent="ActionLayer/Mountain6" index="8" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="2x1t3" parent="ActionLayer/Mountain6" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(252, -17)
+
+[node name="Mountain7" type="Node2D" parent="ActionLayer" index="24"]
+position = Vector2(32500, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain7" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain7" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="4x4t3" parent="ActionLayer/Mountain7" index="2" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="1x2t" parent="ActionLayer/Mountain7" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain7" index="4" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain7" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x1t2" parent="ActionLayer/Mountain7" index="6" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="2x1t3" parent="ActionLayer/Mountain7" index="7" instance=ExtResource("9_sdlqc")]
+position = Vector2(252, -17)
+
+[node name="Mountain8" type="Node2D" parent="ActionLayer" index="25"]
+position = Vector2(25000, 512)
+
+[node name="4x4t" parent="ActionLayer/Mountain8" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(-138, -71)
+
+[node name="4x4t2" parent="ActionLayer/Mountain8" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -72)
+
+[node name="2x2t" parent="ActionLayer/Mountain8" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(-246, -35)
+
+[node name="4x4t3" parent="ActionLayer/Mountain8" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(0, -215)
+
+[node name="2x1t" parent="ActionLayer/Mountain8" index="4" instance=ExtResource("9_sdlqc")]
+position = Vector2(-318, -17)
+
+[node name="1x2t" parent="ActionLayer/Mountain8" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-90, -179)
+
+[node name="4x4t4" parent="ActionLayer/Mountain8" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(144, -71)
+
+[node name="1x2t2" parent="ActionLayer/Mountain8" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(90, -179)
+
+[node name="2x2t2" parent="ActionLayer/Mountain8" index="8" instance=ExtResource("8_j27ri")]
+position = Vector2(252, -35)
+
+[node name="2x1t2" parent="ActionLayer/Mountain8" index="9" instance=ExtResource("9_sdlqc")]
+position = Vector2(324, -17)
+
+[node name="Highlands" type="Node2D" parent="ActionLayer" index="26"]
+
+[node name="Spikes" parent="ActionLayer/Highlands" index="0" instance=ExtResource("13_n30ah")]
+position = Vector2(5819, 341)
+
+[node name="4x4t3" parent="ActionLayer/Highlands" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(5855, 440)
+
+[node name="4x4t2" parent="ActionLayer/Highlands" index="2" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 296)
+
+[node name="4x4t" parent="ActionLayer/Highlands" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 296)
+
+[node name="4x4t4" parent="ActionLayer/Highlands" index="4" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 440)
+
+[node name="4x4t5" parent="ActionLayer/Highlands" index="5" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 440)
+
+[node name="1x2t" parent="ActionLayer/Highlands" index="6" instance=ExtResource("10_ufa62")]
+position = Vector2(5801, 332)
+
+[node name="1x2t3" parent="ActionLayer/Highlands" index="7" instance=ExtResource("10_ufa62")]
+position = Vector2(5909, 332)
+
+[node name="4x4t6" parent="ActionLayer/Highlands" index="8" instance=ExtResource("7_qsyp6")]
+position = Vector2(5998, 440)
+
+[node name="4x4t7" parent="ActionLayer/Highlands" index="9" instance=ExtResource("7_qsyp6")]
+position = Vector2(5998, 296)
+
+[node name="4x4t8" parent="ActionLayer/Highlands" index="10" instance=ExtResource("7_qsyp6")]
+position = Vector2(6142, 440)
+
+[node name="1x2t2" parent="ActionLayer/Highlands" index="11" instance=ExtResource("10_ufa62")]
+position = Vector2(6088, 332)
+
+[node name="2x2t2" parent="ActionLayer/Highlands" index="12" instance=ExtResource("8_j27ri")]
+position = Vector2(6250, 476)
+
+[node name="Highlands2" type="Node2D" parent="ActionLayer" index="27"]
+position = Vector2(14000, 0)
+
+[node name="Spikes" parent="ActionLayer/Highlands2" index="0" instance=ExtResource("13_n30ah")]
+position = Vector2(5792, 344)
+
+[node name="Spikes2" parent="ActionLayer/Highlands2" index="1" instance=ExtResource("13_n30ah")]
+position = Vector2(5845, 344)
+
+[node name="4x4t12" parent="ActionLayer/Highlands2" index="2" instance=ExtResource("7_qsyp6")]
+position = Vector2(6142, 296)
+
+[node name="4x4t13" parent="ActionLayer/Highlands2" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(6428, 296)
+
+[node name="4x4t14" parent="ActionLayer/Highlands2" index="4" instance=ExtResource("7_qsyp6")]
+position = Vector2(6572, 440)
+
+[node name="1x2t" parent="ActionLayer/Highlands2" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(6518, 332)
+
+[node name="1x2t3" parent="ActionLayer/Highlands2" index="6" instance=ExtResource("10_ufa62")]
+position = Vector2(6662, 476)
+
+[node name="4x4t3" parent="ActionLayer/Highlands2" index="7" instance=ExtResource("7_qsyp6")]
+position = Vector2(5855, 440)
+
+[node name="4x4t2" parent="ActionLayer/Highlands2" index="8" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 296)
+
+[node name="4x4t" parent="ActionLayer/Highlands2" index="9" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 296)
+
+[node name="4x4t4" parent="ActionLayer/Highlands2" index="10" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 440)
+
+[node name="4x4t5" parent="ActionLayer/Highlands2" index="11" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 440)
+
+[node name="4x4t6" parent="ActionLayer/Highlands2" index="12" instance=ExtResource("7_qsyp6")]
+position = Vector2(5998, 440)
+
+[node name="4x4t7" parent="ActionLayer/Highlands2" index="13" instance=ExtResource("7_qsyp6")]
+position = Vector2(5998, 296)
+
+[node name="4x4t8" parent="ActionLayer/Highlands2" index="14" instance=ExtResource("7_qsyp6")]
+position = Vector2(6142, 440)
+
+[node name="4x4t9" parent="ActionLayer/Highlands2" index="15" instance=ExtResource("7_qsyp6")]
+position = Vector2(6284, 440)
+
+[node name="4x4t10" parent="ActionLayer/Highlands2" index="16" instance=ExtResource("7_qsyp6")]
+position = Vector2(6284, 296)
+
+[node name="4x4t11" parent="ActionLayer/Highlands2" index="17" instance=ExtResource("7_qsyp6")]
+position = Vector2(6428, 440)
+
+[node name="2x4t" parent="ActionLayer/Highlands2" index="18" instance=ExtResource("16_tkqpr")]
+position = Vector2(5459, 440)
+
+[node name="2x2t3" parent="ActionLayer/Highlands2" index="19" instance=ExtResource("8_j27ri")]
+position = Vector2(5387, 476)
+
+[node name="1x2t2" parent="ActionLayer/Highlands2" index="20" instance=ExtResource("10_ufa62")]
+position = Vector2(5477, 332)
+
+[node name="4x4t15" parent="ActionLayer/Highlands2" index="21" instance=ExtResource("7_qsyp6")]
+position = Vector2(6752, 296)
+
+[node name="2x2t" parent="ActionLayer/Highlands2" index="22" instance=ExtResource("8_j27ri")]
+position = Vector2(6716, 188)
+
+[node name="4x2t" parent="ActionLayer/Highlands2" index="23" instance=ExtResource("28_hdwbo")]
+position = Vector2(6680, 116)
+
+[node name="2x2t2" parent="ActionLayer/Highlands2" index="24" instance=ExtResource("8_j27ri")]
+position = Vector2(6788, 404)
+
+[node name="4x2t2" parent="ActionLayer/Highlands2" index="25" instance=ExtResource("28_hdwbo")]
+position = Vector2(6536, 116)
+
+[node name="4x4t16" parent="ActionLayer/Highlands2" index="26" instance=ExtResource("7_qsyp6")]
+position = Vector2(5277, 296)
+
+[node name="2x2t4" parent="ActionLayer/Highlands2" index="27" instance=ExtResource("8_j27ri")]
+position = Vector2(5241, 404)
+
+[node name="4x4t17" parent="ActionLayer/Highlands2" index="28" instance=ExtResource("7_qsyp6")]
+position = Vector2(5277, 152)
+
+[node name="Highlands3" type="Node2D" parent="ActionLayer" index="28"]
+position = Vector2(23000, 0)
+
+[node name="4x4t12" parent="ActionLayer/Highlands3" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(6142, 296)
+
+[node name="4x4t13" parent="ActionLayer/Highlands3" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(6428, 296)
+
+[node name="4x4t14" parent="ActionLayer/Highlands3" index="2" instance=ExtResource("7_qsyp6")]
+position = Vector2(6572, 440)
+
+[node name="1x2t" parent="ActionLayer/Highlands3" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(6518, 332)
+
+[node name="1x2t3" parent="ActionLayer/Highlands3" index="4" instance=ExtResource("10_ufa62")]
+position = Vector2(6662, 476)
+
+[node name="4x4t3" parent="ActionLayer/Highlands3" index="5" instance=ExtResource("7_qsyp6")]
+position = Vector2(5855, 440)
+
+[node name="4x4t2" parent="ActionLayer/Highlands3" index="6" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 296)
+
+[node name="4x4t" parent="ActionLayer/Highlands3" index="7" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 296)
+
+[node name="4x4t4" parent="ActionLayer/Highlands3" index="8" instance=ExtResource("7_qsyp6")]
+position = Vector2(5567, 440)
+
+[node name="4x4t5" parent="ActionLayer/Highlands3" index="9" instance=ExtResource("7_qsyp6")]
+position = Vector2(5711, 440)
+
+[node name="4x4t6" parent="ActionLayer/Highlands3" index="10" instance=ExtResource("7_qsyp6")]
+position = Vector2(5998, 440)
+
+[node name="4x4t8" parent="ActionLayer/Highlands3" index="11" instance=ExtResource("7_qsyp6")]
+position = Vector2(6142, 440)
+
+[node name="4x4t9" parent="ActionLayer/Highlands3" index="12" instance=ExtResource("7_qsyp6")]
+position = Vector2(6284, 440)
+
+[node name="4x4t10" parent="ActionLayer/Highlands3" index="13" instance=ExtResource("7_qsyp6")]
+position = Vector2(6284, 296)
+
+[node name="4x4t11" parent="ActionLayer/Highlands3" index="14" instance=ExtResource("7_qsyp6")]
+position = Vector2(6428, 440)
+
+[node name="2x4t" parent="ActionLayer/Highlands3" index="15" instance=ExtResource("16_tkqpr")]
+position = Vector2(5459, 440)
+
+[node name="2x2t3" parent="ActionLayer/Highlands3" index="16" instance=ExtResource("8_j27ri")]
+position = Vector2(5387, 476)
+
+[node name="1x2t2" parent="ActionLayer/Highlands3" index="17" instance=ExtResource("10_ufa62")]
+position = Vector2(5477, 332)
+
+[node name="4x4t15" parent="ActionLayer/Highlands3" index="18" instance=ExtResource("7_qsyp6")]
+position = Vector2(6752, 296)
+
+[node name="2x2t" parent="ActionLayer/Highlands3" index="19" instance=ExtResource("8_j27ri")]
+position = Vector2(6716, 188)
+
+[node name="4x2t" parent="ActionLayer/Highlands3" index="20" instance=ExtResource("28_hdwbo")]
+position = Vector2(6680, 116)
+
+[node name="2x2t2" parent="ActionLayer/Highlands3" index="21" instance=ExtResource("8_j27ri")]
+position = Vector2(6788, 404)
+
+[node name="4x2t2" parent="ActionLayer/Highlands3" index="22" instance=ExtResource("28_hdwbo")]
+position = Vector2(6536, 116)
+
+[node name="4x4t16" parent="ActionLayer/Highlands3" index="23" instance=ExtResource("7_qsyp6")]
+position = Vector2(5277, 296)
+
+[node name="4x4t17" parent="ActionLayer/Highlands3" index="24" instance=ExtResource("7_qsyp6")]
+position = Vector2(5277, 152)
+
+[node name="Spikes" parent="ActionLayer/Highlands3" index="25" instance=ExtResource("13_n30ah")]
+position = Vector2(5783, 344)
+
+[node name="Spikes2" parent="ActionLayer/Highlands3" index="26" instance=ExtResource("13_n30ah")]
+position = Vector2(5855, 344)
+
+[node name="Spikes3" parent="ActionLayer/Highlands3" index="27" instance=ExtResource("13_n30ah")]
+position = Vector2(5927, 344)
+
+[node name="Spikes4" parent="ActionLayer/Highlands3" index="28" instance=ExtResource("13_n30ah")]
+position = Vector2(5998, 344)
+
+[node name="PickUpWeapon" parent="ActionLayer" index="29" instance=ExtResource("14_3xb5q")]
+position = Vector2(800, 512)
+action_labels = Array[String](["Press %s to pick up sword"])
+
+[node name="MeleeWeapon" parent="ActionLayer/PickUpWeapon" index="2" instance=ExtResource("15_fw5en")]
+position = Vector2(54, -1)
+stats = SubResource("Resource_n3qrw")
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/PickUpWeapon" index="3"]
+position = Vector2(4, -65)
+
+[node name="Wormpit" type="Node2D" parent="ActionLayer" index="30"]
+position = Vector2(17160, 512)
+
+[node name="2x2t" parent="ActionLayer/Wormpit" index="0" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -39)
+
+[node name="1x2t" parent="ActionLayer/Wormpit" index="1" instance=ExtResource("10_ufa62")]
+position = Vector2(-54, -39)
+
+[node name="2x2t2" parent="ActionLayer/Wormpit" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -111)
+
+[node name="1x2t2" parent="ActionLayer/Wormpit" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(54, -39)
+
+[node name="Wormpit2" type="Node2D" parent="ActionLayer" index="31"]
+position = Vector2(17448, 512)
+
+[node name="2x2t" parent="ActionLayer/Wormpit2" index="0" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -39)
+
+[node name="1x2t" parent="ActionLayer/Wormpit2" index="1" instance=ExtResource("10_ufa62")]
+position = Vector2(-54, -39)
+
+[node name="2x2t2" parent="ActionLayer/Wormpit2" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -111)
+
+[node name="1x2t2" parent="ActionLayer/Wormpit2" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(54, -39)
+
+[node name="Wormpit3" type="Node2D" parent="ActionLayer" index="32"]
+position = Vector2(17736, 512)
+
+[node name="2x2t" parent="ActionLayer/Wormpit3" index="0" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -39)
+
+[node name="1x2t" parent="ActionLayer/Wormpit3" index="1" instance=ExtResource("10_ufa62")]
+position = Vector2(-54, -39)
+
+[node name="2x2t2" parent="ActionLayer/Wormpit3" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -111)
+
+[node name="1x2t2" parent="ActionLayer/Wormpit3" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(54, -39)
+
+[node name="Wormpit4" type="Node2D" parent="ActionLayer" index="33"]
+position = Vector2(18024, 512)
+
+[node name="2x2t" parent="ActionLayer/Wormpit4" index="0" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -39)
+
+[node name="1x2t" parent="ActionLayer/Wormpit4" index="1" instance=ExtResource("10_ufa62")]
+position = Vector2(-54, -39)
+
+[node name="2x2t2" parent="ActionLayer/Wormpit4" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -111)
+
+[node name="1x2t2" parent="ActionLayer/Wormpit4" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(54, -39)
+
+[node name="Wormpit5" type="Node2D" parent="ActionLayer" index="34"]
+position = Vector2(18600, 512)
+
+[node name="2x2t" parent="ActionLayer/Wormpit5" index="0" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -39)
+
+[node name="1x2t" parent="ActionLayer/Wormpit5" index="1" instance=ExtResource("10_ufa62")]
+position = Vector2(-54, -39)
+
+[node name="2x2t2" parent="ActionLayer/Wormpit5" index="2" instance=ExtResource("8_j27ri")]
+position = Vector2(0, -111)
+
+[node name="1x2t2" parent="ActionLayer/Wormpit5" index="3" instance=ExtResource("10_ufa62")]
+position = Vector2(54, -39)
+
+[node name="Wall" type="Node2D" parent="ActionLayer" index="35"]
+position = Vector2(25800, 512)
+
+[node name="1x2t" parent="ActionLayer/Wall" index="0" instance=ExtResource("10_ufa62")]
+position = Vector2(-73, -34)
+
+[node name="1x4t" parent="ActionLayer/Wall" index="1" instance=ExtResource("20_i5fpv")]
+position = Vector2(-37, -71)
+
+[node name="1x4t2" parent="ActionLayer/Wall" index="2" instance=ExtResource("20_i5fpv")]
+position = Vector2(-1, -140)
+
+[node name="1x4t3" parent="ActionLayer/Wall" index="3" instance=ExtResource("20_i5fpv")]
+position = Vector2(35, -71)
+
+[node name="1x2t3" parent="ActionLayer/Wall" index="4" instance=ExtResource("10_ufa62")]
+position = Vector2(71, -34)
+
+[node name="1x2t2" parent="ActionLayer/Wall" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-1, -33)
+
+[node name="Spikes" parent="ActionLayer/Wall" index="6" instance=ExtResource("13_n30ah")]
+position = Vector2(89, -27)
+
+[node name="Spikes2" parent="ActionLayer/Wall" index="7" instance=ExtResource("13_n30ah")]
+position = Vector2(161, -27)
+
+[node name="Wall2" type="Node2D" parent="ActionLayer" index="36"]
+position = Vector2(26124, 512)
+
+[node name="1x2t" parent="ActionLayer/Wall2" index="0" instance=ExtResource("10_ufa62")]
+position = Vector2(-73, -34)
+
+[node name="1x4t" parent="ActionLayer/Wall2" index="1" instance=ExtResource("20_i5fpv")]
+position = Vector2(-37, -71)
+
+[node name="1x4t2" parent="ActionLayer/Wall2" index="2" instance=ExtResource("20_i5fpv")]
+position = Vector2(-1, -140)
+
+[node name="1x4t3" parent="ActionLayer/Wall2" index="3" instance=ExtResource("20_i5fpv")]
+position = Vector2(35, -71)
+
+[node name="1x2t3" parent="ActionLayer/Wall2" index="4" instance=ExtResource("10_ufa62")]
+position = Vector2(71, -34)
+
+[node name="1x2t2" parent="ActionLayer/Wall2" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-1, -33)
+
+[node name="Wall3" type="Node2D" parent="ActionLayer" index="37"]
+position = Vector2(27000, 512)
+
+[node name="1x2t" parent="ActionLayer/Wall3" index="0" instance=ExtResource("10_ufa62")]
+position = Vector2(-73, -34)
+
+[node name="1x4t" parent="ActionLayer/Wall3" index="1" instance=ExtResource("20_i5fpv")]
+position = Vector2(-37, -71)
+
+[node name="1x4t2" parent="ActionLayer/Wall3" index="2" instance=ExtResource("20_i5fpv")]
+position = Vector2(-1, -140)
+
+[node name="1x4t3" parent="ActionLayer/Wall3" index="3" instance=ExtResource("20_i5fpv")]
+position = Vector2(35, -71)
+
+[node name="1x2t3" parent="ActionLayer/Wall3" index="4" instance=ExtResource("10_ufa62")]
+position = Vector2(71, -34)
+
+[node name="1x2t2" parent="ActionLayer/Wall3" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-1, -33)
+
+[node name="Spikes" parent="ActionLayer/Wall3" index="6" instance=ExtResource("13_n30ah")]
+position = Vector2(88, -25)
+
+[node name="Spikes2" parent="ActionLayer/Wall3" index="7" instance=ExtResource("13_n30ah")]
+position = Vector2(161, -26)
+
+[node name="Wall4" type="Node2D" parent="ActionLayer" index="38"]
+position = Vector2(27324, 512)
+
+[node name="1x2t" parent="ActionLayer/Wall4" index="0" instance=ExtResource("10_ufa62")]
+position = Vector2(-73, -34)
+
+[node name="1x4t" parent="ActionLayer/Wall4" index="1" instance=ExtResource("20_i5fpv")]
+position = Vector2(-37, -71)
+
+[node name="1x4t2" parent="ActionLayer/Wall4" index="2" instance=ExtResource("20_i5fpv")]
+position = Vector2(-1, -140)
+
+[node name="1x4t3" parent="ActionLayer/Wall4" index="3" instance=ExtResource("20_i5fpv")]
+position = Vector2(35, -71)
+
+[node name="1x2t3" parent="ActionLayer/Wall4" index="4" instance=ExtResource("10_ufa62")]
+position = Vector2(71, -34)
+
+[node name="1x2t2" parent="ActionLayer/Wall4" index="5" instance=ExtResource("10_ufa62")]
+position = Vector2(-1, -33)
+
+[node name="PickUpRedFlower" parent="ActionLayer" index="39" node_paths=PackedStringArray("content_position") instance=ExtResource("14_3xb5q")]
+position = Vector2(31027, 509)
+action_labels = Array[String](["Press %s to pick up red flower"])
+content_position = NodePath("Marker2D")
+
+[node name="RedFlower" parent="ActionLayer/PickUpRedFlower" index="2" instance=ExtResource("23_6ija2")]
+position = Vector2(66, -37)
+color = 1
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/PickUpRedFlower" index="3"]
+position = Vector2(-2, -109)
+
+[node name="PickUpBlueFlower" parent="ActionLayer" index="40" node_paths=PackedStringArray("content_position") instance=ExtResource("14_3xb5q")]
+position = Vector2(31233, 508)
+action_labels = Array[String](["Press %s to pick up blue flower"])
+content_position = NodePath("Marker2D")
+
+[node name="BlueFlower" parent="ActionLayer/PickUpBlueFlower" index="2" instance=ExtResource("23_6ija2")]
+position = Vector2(66, -37)
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/PickUpBlueFlower" index="3"]
+position = Vector2(1, -111)
+
+[node name="Cave" type="Node2D" parent="ActionLayer" index="41"]
+position = Vector2(27780, 512)
+
+[node name="4x4t" parent="ActionLayer/Cave" index="0" instance=ExtResource("7_qsyp6")]
+position = Vector2(353, -216)
+
+[node name="4x4t2" parent="ActionLayer/Cave" index="1" instance=ExtResource("7_qsyp6")]
+position = Vector2(353, -360)
+
+[node name="4x4t3" parent="ActionLayer/Cave" index="2" instance=ExtResource("7_qsyp6")]
+position = Vector2(209, -216)
+
+[node name="4x4t4" parent="ActionLayer/Cave" index="3" instance=ExtResource("7_qsyp6")]
+position = Vector2(209, -360)
+
+[node name="4x4t5" parent="ActionLayer/Cave" index="4" instance=ExtResource("7_qsyp6")]
+position = Vector2(65, -216)
+
+[node name="4x4t6" parent="ActionLayer/Cave" index="5" instance=ExtResource("7_qsyp6")]
+position = Vector2(65, -360)
+
+[node name="2x2t" parent="ActionLayer/Cave" index="6" instance=ExtResource("8_j27ri")]
+position = Vector2(29, -108)
+
+[node name="QuestGiverArea" parent="ActionLayer" index="42" node_paths=PackedStringArray("custom_content_position", "content_position") instance=ExtResource("2_c02dy")]
+position = Vector2(411, 499)
+inspectable_object_key = "quest_giver"
+panel_minimum_width = 250.0
+custom_content_position = NodePath("CustomContentMarker2D2")
+content_position = NodePath("Marker2D")
+
+[node name="QuestGiver" parent="ActionLayer/QuestGiverArea" index="0" instance=ExtResource("24_ap7py")]
+position = Vector2(-17, -36)
+
+[node name="Area2D" type="Area2D" parent="ActionLayer/QuestGiverArea" index="3"]
+position = Vector2(24, 8)
+scale = Vector2(0.046875, 0.015625)
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionLayer/QuestGiverArea/Area2D" index="0"]
+position = Vector2(-831.997, -2816)
+shape = SubResource("RectangleShape2D_1fte1")
+debug_color = Color(0.772549, 0.843137, 0.556863, 0.627451)
+
+[node name="Marker2D" type="Marker2D" parent="ActionLayer/QuestGiverArea" index="4"]
+position = Vector2(-75, -115)
+scale = Vector2(0.046875, 0.015625)
+
+[node name="CustomContentMarker2D2" type="Marker2D" parent="ActionLayer/QuestGiverArea" index="5"]
+position = Vector2(-107, -187)
+scale = Vector2(0.046875, 0.015625)
+
+[node name="Guardian" parent="ActionLayer" index="43" instance=ExtResource("25_rv2c4")]
+position = Vector2(30843, 467)
+
+[node name="ForegroundLayer" type="Node2D" parent="." index="4"]
+z_index = 5
+
+[node name="Ground" type="StaticBody2D" parent="ForegroundLayer" index="0"]
+collision_mask = 7
+
+[node name="Grass1" type="Polygon2D" parent="ForegroundLayer/Ground" index="0"]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("11_7fspj")
+texture_offset = Vector2(0, 5)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(-400, 495, 33000, 495, 33000, 620, -400, 620)
+
+[node name="Grass2" type="Polygon2D" parent="ForegroundLayer/Ground" index="1"]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("11_7fspj")
+texture_offset = Vector2(40, 98)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(-400, 530, 33000, 530, 33000, 650, -400, 650)
+
+[node name="Grass3" type="Polygon2D" parent="ForegroundLayer/Ground" index="2"]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("12_acpq5")
+texture_offset = Vector2(40, 95)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(-400, 575, 33000, 575, 33000, 650, -400, 650)
+
+[node name="Grass4" type="Polygon2D" parent="ForegroundLayer/Ground" index="3"]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("12_acpq5")
+texture_offset = Vector2(0, 64)
+texture_scale = Vector2(8, 8)
+polygon = PackedVector2Array(-400, 604, 33000, 604, 33000, 650, -400, 650)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForegroundLayer/Ground" index="4"]
+position = Vector2(16500, 521.25)
+shape = SubResource("RectangleShape2D_vgsv0")
+debug_color = Color(0.764706, 0.568627, 0.556863, 0.443137)
+
+[node name="River1" type="Node2D" parent="ForegroundLayer" index="1"]
+
+[node name="Water" parent="ForegroundLayer/River1" index="0" instance=ExtResource("11_7cqrf")]
+z_index = 1
+position = Vector2(7803, 509)
+
+[node name="WaterEdge" parent="ForegroundLayer/River1" index="1" instance=ExtResource("16_pww2q")]
+position = Vector2(7792, 497)
+
+[node name="WaterEdge2" parent="ForegroundLayer/River1" index="2" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 534)
+
+[node name="WaterEdge3" parent="ForegroundLayer/River1" index="3" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 568)
+
+[node name="WaterEdge4" parent="ForegroundLayer/River1" index="4" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 608)
+
+[node name="WaterEdge5" parent="ForegroundLayer/River1" index="5" instance=ExtResource("16_pww2q")]
+position = Vector2(8195, 500)
+
+[node name="WaterEdge6" parent="ForegroundLayer/River1" index="6" instance=ExtResource("16_pww2q")]
+position = Vector2(8196, 539)
+
+[node name="WaterEdge7" parent="ForegroundLayer/River1" index="7" instance=ExtResource("16_pww2q")]
+position = Vector2(8196, 576)
+
+[node name="WaterEdge8" parent="ForegroundLayer/River1" index="8" instance=ExtResource("16_pww2q")]
+position = Vector2(8198, 614)
+
+[node name="River2" type="Node2D" parent="ForegroundLayer" index="2"]
+position = Vector2(1600, 0)
+
+[node name="Water" parent="ForegroundLayer/River2" index="0" instance=ExtResource("11_7cqrf")]
+z_index = 1
+position = Vector2(7803, 509)
+
+[node name="WaterEdge" parent="ForegroundLayer/River2" index="1" instance=ExtResource("16_pww2q")]
+position = Vector2(7792, 497)
+
+[node name="WaterEdge2" parent="ForegroundLayer/River2" index="2" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 534)
+
+[node name="WaterEdge3" parent="ForegroundLayer/River2" index="3" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 568)
+
+[node name="WaterEdge4" parent="ForegroundLayer/River2" index="4" instance=ExtResource("16_pww2q")]
+position = Vector2(7793, 608)
+
+[node name="WaterEdge5" parent="ForegroundLayer/River2" index="5" instance=ExtResource("16_pww2q")]
+position = Vector2(8195, 500)
+
+[node name="WaterEdge6" parent="ForegroundLayer/River2" index="6" instance=ExtResource("16_pww2q")]
+position = Vector2(8196, 539)
+
+[node name="WaterEdge7" parent="ForegroundLayer/River2" index="7" instance=ExtResource("16_pww2q")]
+position = Vector2(8196, 576)
+
+[node name="WaterEdge8" parent="ForegroundLayer/River2" index="8" instance=ExtResource("16_pww2q")]
+position = Vector2(8198, 614)

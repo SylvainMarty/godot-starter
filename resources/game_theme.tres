@@ -1,0 +1,111 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://d20p7ge4rgxc4"]
+
+[ext_resource type="Texture2D" uid="uid://dfhp5cb6ra1b8" path="res://assets/art/objects/bubble_square.png" id="1_ddg8t"]
+[ext_resource type="FontFile" uid="uid://bunpwknrowkc7" path="res://resources/PenguinAttack.ttf" id="2_atnny"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au2ly"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2aw1e"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgdwr"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="SystemFont" id="SystemFont_3olk2"]
+font_names = PackedStringArray("Cascadia Mono")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o7uw"]
+bg_color = Color(0, 0, 0, 0.345098)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x586a"]
+content_margin_left = 8.0
+content_margin_top = 7.0
+content_margin_right = 8.0
+content_margin_bottom = 7.0
+texture = ExtResource("1_ddg8t")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(52, 140, 897, 570)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1rcd"]
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aw7f4"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+default_font = ExtResource("2_atnny")
+Button/colors/font_hover_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_au2ly")
+Button/styles/hover = SubResource("StyleBoxFlat_2aw1e")
+Button/styles/normal = SubResource("StyleBoxFlat_qgdwr")
+DebugLabel/base_type = &"Label"
+DebugLabel/colors/font_color = Color(1, 1, 1, 1)
+DebugLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+DebugLabel/fonts/font = SubResource("SystemFont_3olk2")
+DebugPanelContainer/base_type = &"PanelContainer"
+DebugPanelContainer/styles/panel = SubResource("StyleBoxFlat_8o7uw")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_x586a")
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_outline_color = Color(1, 1, 1, 1)
+ProgressBar/styles/background = SubResource("StyleBoxFlat_y1rcd")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_aw7f4")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)

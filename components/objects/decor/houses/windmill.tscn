@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://iqbxsnq531rm"]
+
+[ext_resource type="Texture2D" uid="uid://dwyv05xrbxq0h" path="res://assets/art/objects/windmill.png" id="1_bityx"]
+
+[node name="Windmill" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture = ExtResource("1_bityx")
+texture_scale = Vector2(6, 6)
+polygon = PackedVector2Array(0, 0, 0, 170, 165, 170, 165, 0)

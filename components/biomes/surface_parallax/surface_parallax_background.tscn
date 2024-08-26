@@ -1,0 +1,130 @@
+[gd_scene load_steps=8 format=3 uid="uid://df4eamsehktgy"]
+
+[ext_resource type="Texture2D" uid="uid://daboaynbyu62o" path="res://assets/art/objects/sky_background.png" id="1_huwbi"]
+[ext_resource type="Texture2D" uid="uid://csk7pvxp20mwd" path="res://assets/art/objects/mountains.png" id="2_xaxsj"]
+[ext_resource type="Texture2D" uid="uid://dusdiydcbnjh5" path="res://assets/art/objects/hills.png" id="3_00hx6"]
+[ext_resource type="Shader" path="res://components/shaders/blur_effect.gdshader" id="3_d3wq7"]
+[ext_resource type="Texture2D" uid="uid://dl86lewjsqfwb" path="res://assets/art/objects/trees.png" id="4_fvk63"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rynrb"]
+shader = ExtResource("3_d3wq7")
+shader_parameter/lod = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uuycf"]
+shader = ExtResource("3_d3wq7")
+shader_parameter/lod = 0.15
+
+[node name="SurfaceParallaxBackground" type="Node2D"]
+
+[node name="FarParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="FarParallaxBackground"]
+texture = ExtResource("1_huwbi")
+polygon = PackedVector2Array(-392, 512, -392, 0, 33000, 0, 33000, 512)
+
+[node name="CloudMountainsParallaxLayer" type="ParallaxLayer" parent="FarParallaxBackground"]
+position = Vector2(104, 8)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1300, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="FarParallaxBackground/CloudMountainsParallaxLayer"]
+use_parent_material = true
+position = Vector2(-248, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xaxsj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="FarParallaxBackground/CloudMountainsParallaxLayer"]
+position = Vector2(248, 256)
+scale = Vector2(-0.5, 0.5)
+texture = ExtResource("2_xaxsj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="FarParallaxBackground/CloudMountainsParallaxLayer"]
+position = Vector2(744, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xaxsj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="FarParallaxBackground/CloudMountainsParallaxLayer"]
+position = Vector2(1048, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xaxsj")
+
+[node name="Blur" type="ColorRect" parent="FarParallaxBackground/CloudMountainsParallaxLayer"]
+editor_description = "Sadly it doesn' work for web export"
+visible = false
+material = SubResource("ShaderMaterial_rynrb")
+offset_left = -494.0
+offset_top = -8.0
+offset_right = 1096.0
+offset_bottom = 504.0
+color = Color(1, 1, 1, 0.384314)
+
+[node name="HillsParallaxLayer" type="ParallaxLayer" parent="FarParallaxBackground"]
+position = Vector2(104, 8)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1698.59, 0)
+
+[node name="HillsSprite2D" type="Sprite2D" parent="FarParallaxBackground/HillsParallaxLayer"]
+position = Vector2(-248, 256)
+scale = Vector2(-0.5, 0.5)
+texture = ExtResource("3_00hx6")
+
+[node name="HillsSprite2D2" type="Sprite2D" parent="FarParallaxBackground/HillsParallaxLayer"]
+position = Vector2(248, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_00hx6")
+
+[node name="HillsSprite2D3" type="Sprite2D" parent="FarParallaxBackground/HillsParallaxLayer"]
+position = Vector2(744, 256)
+scale = Vector2(-0.5, 0.5)
+texture = ExtResource("3_00hx6")
+
+[node name="HillsSprite2D4" type="Sprite2D" parent="FarParallaxBackground/HillsParallaxLayer"]
+position = Vector2(1232, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_00hx6")
+
+[node name="Blur" type="ColorRect" parent="FarParallaxBackground/HillsParallaxLayer"]
+visible = false
+material = SubResource("ShaderMaterial_uuycf")
+offset_left = -494.0
+offset_top = -8.0
+offset_right = 1096.0
+offset_bottom = 504.0
+color = Color(1, 1, 1, 0.384314)
+
+[node name="ForestParallaxLayer" type="ParallaxLayer" parent="FarParallaxBackground"]
+position = Vector2(104, 8)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1590, 0)
+
+[node name="DarkerForestSprite2D" type="Sprite2D" parent="FarParallaxBackground/ForestParallaxLayer"]
+modulate = Color(0.77084, 0.770839, 0.770839, 1)
+position = Vector2(-120, 352)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_fvk63")
+
+[node name="DarkerForestSprite2D2" type="Sprite2D" parent="FarParallaxBackground/ForestParallaxLayer"]
+modulate = Color(0.77084, 0.770839, 0.770839, 1)
+position = Vector2(736, 336)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_fvk63")
+
+[node name="Fog" type="ColorRect" parent="FarParallaxBackground/ForestParallaxLayer"]
+material = SubResource("ShaderMaterial_rynrb")
+offset_left = -494.0
+offset_top = -8.0
+offset_right = 1096.0
+offset_bottom = 504.0
+color = Color(1, 1, 1, 0.384314)
+
+[node name="CloseParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ForestParallaxLayer" type="ParallaxLayer" parent="CloseParallaxBackground"]
+position = Vector2(104, 8)
+motion_scale = Vector2(1.05, 1.05)
+motion_mirroring = Vector2(1800, 0)
+
+[node name="ForestSprite2D" type="Sprite2D" parent="CloseParallaxBackground/ForestParallaxLayer"]
+position = Vector2(-248, 256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_fvk63")
