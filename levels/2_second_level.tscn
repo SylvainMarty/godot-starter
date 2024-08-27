@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b06b0cf07gsu0"]
+
+[ext_resource type="PackedScene" uid="uid://v16uck06pb6v" path="res://components/levels/base_level.tscn" id="1_hc613"]
+[ext_resource type="AudioStream" uid="uid://4ta3rvet1fa1" path="res://assets/sound/level4_final.mp3" id="2_l26y3"]
+
+[node name="SecondLevel" instance=ExtResource("1_hc613")]
+audio_stream = ExtResource("2_l26y3")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="0"]
+energy = 0.6
+blend_mode = 1
+
+[node name="BackgroundLayer" type="Node2D" parent="." index="1"]
+z_index = -5
+
+[node name="ActionLayer" type="Node2D" parent="." index="2"]
+
+[node name="ForegroundLayer" type="Node2D" parent="." index="3"]
+z_index = 5

@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://d20p7ge4rgxc4"]
 
-[ext_resource type="Texture2D" uid="uid://dfhp5cb6ra1b8" path="res://assets/art/objects/bubble_square.png" id="1_ddg8t"]
-[ext_resource type="FontFile" uid="uid://bunpwknrowkc7" path="res://resources/PenguinAttack.ttf" id="2_atnny"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/bubble_square.png" id="1_ddg8t"]
+[ext_resource type="FontFile" uid="uid://bunpwknrowkc7" path="res://assets/fonts/PenguinAttack.ttf" id="2_atnny"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au2ly"]
 bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cltbraey6twck"]
+
+[ext_resource type="PackedScene" uid="uid://v16uck06pb6v" path="res://components/levels/base_level.tscn" id="1_36k3u"]
+[ext_resource type="AudioStream" uid="uid://bjc0ttkj8iex2" path="res://assets/sound/level_0_final.mp3" id="2_4t1de"]
+
+[node name="FirstLevel" node_paths=PackedStringArray("player_spawn_point") instance=ExtResource("1_36k3u")]
+player_spawn_point = NodePath("PlayerSpawnPoint")
+audio_stream = ExtResource("2_4t1de")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="0"]
+color = Color(0.169245, 0.169245, 0.169245, 1)
+energy = 0.5
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="." index="1"]
+position = Vector2(134, 450)
+
+[node name="BackgroundLayer" type="Node2D" parent="." index="2"]
+z_index = -5
+
+[node name="ActionLayer" type="Node2D" parent="." index="3"]
+
+[node name="ForegroundLayer" type="Node2D" parent="." index="4"]
+z_index = 5

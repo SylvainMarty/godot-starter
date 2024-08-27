@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Garden of Gifts"
 config/description="You are on a quest to save your dying village from a terrible plague. You must retrieve the Blue Flower from the Garden of Gifts in time to deliver a cure, navigate a map full of dangers, and unlock the mysterious nature of this world by 'Going Deeper'. In the Garden, it will be up to you if you manage to resist temptation or choose to succumb to it... and live with the consequences."
-run/main_scene="res://levels/main_game.tscn"
+run/main_scene="res://main_game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
