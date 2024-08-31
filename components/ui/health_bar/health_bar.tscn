@@ -7,6 +7,7 @@ z_index = 99
 script = ExtResource("1_7rkvg")
 
 [node name="ProgressBarContainer" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

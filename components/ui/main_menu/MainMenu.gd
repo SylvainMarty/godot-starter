@@ -53,8 +53,8 @@ func resume_game():
 
 func restart_game():
 	resume_game()
-	BiomeManager.init()
-	BiomeManager.has_game_restarted = true
+	LevelManager.init()
+	LevelManager.has_game_restarted = true
 	CharacterState.init()
 	VillageState.init()
 	get_tree().reload_current_scene()

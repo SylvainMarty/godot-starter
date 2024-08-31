@@ -6,11 +6,10 @@
 extends Node
 
 signal object_pick_up_started(object)
-signal red_flower_picked()
 
 const DEFAULT_HEALTH_POINTS = 100
-const DEFAULT_MOVEMENT_SPEED = 400.0
-const DEFAULT_JUMP_VELOCITY = 400.0
+const DEFAULT_MOVEMENT_SPEED = 200.0
+const DEFAULT_JUMP_VELOCITY = 250.0
 const DEFAULT_ATTACK_SPEED = 0.0
 const DEFAULT_ATTACK_RANGE = 0.0
 const DEFAULT_ATTACK_DAMAGE = 0.0
@@ -49,5 +48,3 @@ func update_positions(position: Vector2, global_position: Vector2):
 
 func add_object(object):
 	object_pick_up_started.emit(object)
-	if object is MagicFlower and object.color == Constants.FlowerColor.RED:
-		red_flower_picked.emit()

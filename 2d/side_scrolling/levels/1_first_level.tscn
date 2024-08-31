@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://cltbraey6twck"]
+
+[ext_resource type="PackedScene" uid="uid://v16uck06pb6v" path="res://2d/components/levels/base_level.tscn" id="1_36k3u"]
+[ext_resource type="AudioStream" uid="uid://bjc0ttkj8iex2" path="res://assets/sound/level_0_final.mp3" id="2_4t1de"]
+[ext_resource type="PackedScene" uid="uid://x7wfcolho5mj" path="res://2d/components/objects/ground/block.tscn" id="3_dkks0"]
+[ext_resource type="Texture2D" uid="uid://xcygefmbjmua" path="res://assets/art/Blocks/Brown Dirt/Block 0.5x1.png" id="4_tfbxe"]
+[ext_resource type="Texture2D" uid="uid://diw0heqmeg765" path="res://assets/art/Blocks/Purple/Block 3x0.5.png" id="5_ahvmm"]
+[ext_resource type="Texture2D" uid="uid://ds0txypf5o7ii" path="res://assets/art/Blocks/Grey Light/Block 1x0.5.png" id="6_wcd0p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i2shx"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Block 1x.png-71ccf36f6c6d3fbac9371fde72efe240.ctex"
+
+[node name="FirstLevel" node_paths=PackedStringArray("player_spawn_point") instance=ExtResource("1_36k3u")]
+player_spawn_point = NodePath("PlayerSpawnPoint")
+audio_stream = ExtResource("2_4t1de")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="0"]
+color = Color(0.169245, 0.169245, 0.169245, 1)
+energy = 0.5
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="." index="1"]
+position = Vector2(40, 552)
+
+[node name="BackgroundLayer" type="Node2D" parent="." index="2"]
+z_index = -5
+
+[node name="ActionLayer" type="Node2D" parent="." index="3"]
+
+[node name="Ground" parent="ActionLayer" index="0" instance=ExtResource("3_dkks0")]
+position = Vector2(0, 616)
+width = 1152
+texture = SubResource("CompressedTexture2D_i2shx")
+
+[node name="Block" parent="ActionLayer" index="1" instance=ExtResource("3_dkks0")]
+position = Vector2(128, 600)
+height = 16
+texture = ExtResource("4_tfbxe")
+
+[node name="Block2" parent="ActionLayer" index="2" instance=ExtResource("3_dkks0")]
+position = Vector2(256, 584)
+width = 16
+texture = ExtResource("5_ahvmm")
+
+[node name="Block3" parent="ActionLayer" index="3" instance=ExtResource("3_dkks0")]
+position = Vector2(320, 552)
+width = 16
+height = 64
+texture = ExtResource("6_wcd0p")
+
+[node name="ForegroundLayer" type="Node2D" parent="." index="4"]
+z_index = 5

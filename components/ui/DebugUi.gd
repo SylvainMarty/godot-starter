@@ -3,8 +3,8 @@ extends PanelContainer
 @onready var health_points_label: Label = $MarginContainer/VBoxContainer/HealthGridContainer/HealthPoints
 @onready var health_input: LineEdit = $MarginContainer/VBoxContainer/HealthGridContainer/HealthInput
 @onready var invincible_switch = $MarginContainer/VBoxContainer/HealthGridContainer/InvincibleSwitch
-@onready var level_list = $MarginContainer/VBoxContainer/BiomeGridContainer/LevelList
-@onready var tower_list = $MarginContainer/VBoxContainer/BiomeGridContainer/HBoxContainer/TowerList
+@onready var level_list = $MarginContainer/VBoxContainer/LevelGridContainer/LevelList
+@onready var tower_list = $MarginContainer/VBoxContainer/LevelGridContainer/HBoxContainer/TowerList
 @onready var village_health_points = $MarginContainer/VBoxContainer/VillageHealthGridContainer2/VillageHealthPoints
 @onready var village_invincible_switch = $MarginContainer/VBoxContainer/VillageHealthGridContainer2/VillageInvincibleSwitch
 
@@ -18,10 +18,10 @@ func _unhandled_input(event: InputEvent):
 func _ready():
 	set_healh_options()
 	set_village_healh_options()
-	set_biome_options()
+	set_level_options()
 	CharacterState.health.health_updated.connect(self._on_character_health_updated)
 	VillageState.health.health_updated.connect(self._on_village_health_updated)
-	BiomeManager.current_biome_changed.connect(self._on_biome_changed)
+	LevelManager.current_level_changed.connect(self._on_level_changed)
 
 func _on_character_health_updated(hp):
 	health_points_label.text = str(hp)
@@ -37,14 +37,14 @@ func set_village_healh_options():
 	_on_village_health_updated(VillageState.health.health_points)
 	invincible_switch.button_pressed = VillageState.health.invincible
 
-func set_biome_options():
-	_on_biome_changed(BiomeManager.curr_index, BiomeManager.TowerId.TOWER_1)
-	for tower_id in BiomeManager.TowerId.values():
+func set_level_options():
+	_on_level_changed(LevelManager.curr_index, LevelManager.TowerId.TOWER_1)
+	for tower_id in LevelManager.TowerId.values():
 		tower_list.add_item("Tower %d" % (tower_id + 1), tower_id)
 
-func _on_biome_changed(current_biome_index: int, tower_id: BiomeManager.TowerId):
+func _on_level_changed(current_level_index: int, tower_id: LevelManager.TowerId):
 	tower_list.select(tower_id)
-	level_list.select(current_biome_index)
+	level_list.select(current_level_index)
 
 func _on_heal_button_pressed():
 	CharacterState.health.heal(int(health_input.text))
@@ -53,7 +53,7 @@ func _on_damage_button_pressed():
 	CharacterState.health.damage(int(health_input.text))
 
 func _on_teleport_button_pressed():
-	BiomeManager.set_biome(
+	LevelManager.set_level(
 		level_list.get_selected(),
 		tower_list.get_selected()
 	)

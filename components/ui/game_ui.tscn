@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj7l3xpftmbli"]
+[gd_scene load_steps=3 format=3 uid="uid://cj7l3xpftmbli"]
 
 [ext_resource type="Script" path="res://components/ui/DebugUi.gd" id="2_1jcup"]
-[ext_resource type="Texture2D" uid="uid://sslgtate75io" path="res://assets/protyping/icons/superman.svg" id="3_p7tig"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1eb17"]
 content_margin_bottom = 0.0
@@ -82,7 +81,6 @@ text = "-"
 
 [node name="InvincibleIcon" type="TextureRect" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/HealthGridContainer"]
 layout_mode = 2
-texture = ExtResource("3_p7tig")
 expand_mode = 3
 stretch_mode = 5
 
@@ -113,7 +111,6 @@ horizontal_alignment = 2
 
 [node name="VillageInvincibleIcon" type="TextureRect" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2"]
 layout_mode = 2
-texture = ExtResource("3_p7tig")
 expand_mode = 3
 stretch_mode = 5
 
@@ -135,23 +132,22 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
 
-[node name="BiomeGridContainer" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
+[node name="LevelGridContainer" type="GridContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/v_separation = 5
 columns = 2
 
-[node name="BiomeLevelLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+[node name="LevelLabel" type="Label" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer"]
 layout_mode = 2
 theme_type_variation = &"DebugLabel"
 text = "Level"
 
-[node name="LevelList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+[node name="LevelList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-item_count = 4
 selected = 0
+item_count = 4
 popup/item_0/text = "0"
-popup/item_0/id = 0
 popup/item_1/text = "1"
 popup/item_1/id = 1
 popup/item_2/text = "2"
@@ -159,16 +155,16 @@ popup/item_2/id = 2
 popup/item_3/text = "3"
 popup/item_3/id = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TowerList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer/HBoxContainer"]
+[node name="TowerList" type="OptionButton" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="TeleportButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer"]
+[node name="TeleportButton" type="Button" parent="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Go"
@@ -203,5 +199,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1eb17")
 [connection signal="toggled" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/VillageInvincibleSwitch" to="DebugUIPanelContainer" method="_on_village_invincible_switch_toggled"]
 [connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/KillVillageButton" to="DebugUIPanelContainer" method="_on_kill_village_button_pressed"]
 [connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/VillageHealthGridContainer2/SaveVillageButton" to="DebugUIPanelContainer" method="_on_save_village_button_pressed"]
-[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/BiomeGridContainer/TeleportButton" to="DebugUIPanelContainer" method="_on_teleport_button_pressed"]
+[connection signal="pressed" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/LevelGridContainer/TeleportButton" to="DebugUIPanelContainer" method="_on_teleport_button_pressed"]
 [connection signal="toggled" from="DebugUIPanelContainer/MarginContainer/VBoxContainer/SoundGridContainer2/MuteSoundSwitch" to="DebugUIPanelContainer" method="_on_mute_sound_switch_toggled"]
